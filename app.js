@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
-var escola = require('./routes/escola');
+var tecnologia = require('./routes/tecnologia');
 
 var mongoose = require('mongoose');
 
@@ -55,7 +55,7 @@ app.use(function(req, res, next) {
 app.use('/', routes);
 app.use('/usuario', usuario);
 app.use('/perfil', perfil);
-app.use('/escola', escola);
+app.use('/tecnologia', tecnologia);
 
 
 
