@@ -2,43 +2,43 @@ var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose');
-var Jogador = require('../models/Jogador.js');
+var Clima = require('../models/Clima.js');
 
-/* GET /jogador Listagem de jogador. */
+/* GET /clima Listagem de clima. */
 router.get('/', function(req, res, next) {
-  Jogador.find(function (err, perfil) {
+  Clima.find(function (err, perfil) {
     if (err) return next(err);
     res.json(perfil);
   });
 });
 
-/* POST /jogador Cadastro de jogador */
+/* POST /clima Cadastro de clima */
 router.post('/', function(req, res, next) {
-  Jogador.create(req.body, function (err, post) {
+  Clima.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* GET /jogador/id  Lista filtrada por um jogador*/
+/* GET /clima/id  Lista filtrada por um clima*/
 router.get('/:id', function(req, res, next) {
-  Jogador.findById(req.params.id, function (err, post) {
+  Clima.findById(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* PUT /jogador/:id Salva a edição de jogador */
+/* PUT /clima/:id Salva a edição de clima */
 router.put('/:id', function(req, res, next) {
-  Jogador.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+  Clima.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* DELETE /jogador/:id Deletando o jogador a partir do id */
+/* DELETE /clima/:id Deletando o clima a partir do id */
 router.delete('/:id', function(req, res, next) {
-  Jogador.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+  Clima.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });

@@ -9,8 +9,8 @@ var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
 var tecnologia = require('./routes/tecnologia');
 
-var jogador = require('./routes/jogador');
-var time = require('./routes/time');
+var pais = require('./routes/pais');
+var clima = require('./routes/clima');
 
 var mongoose = require('mongoose');
 
@@ -60,8 +60,8 @@ app.use('/usuario', usuario);
 app.use('/perfil', perfil);
 app.use('/tecnologia', tecnologia);
 
-app.use('/jogador', jogador);
-app.use('/time', time);
+app.use('/pais', pais);
+app.use('/clima', clima);
 
 
 //Configuração de páginas não encontradas
