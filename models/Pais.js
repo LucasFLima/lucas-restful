@@ -9,7 +9,7 @@ var PaisSchema = new mongoose.Schema({
   regimePolitico: String,
   curso: {
         codigo: String,
-        nome: String,
+        nome: String
     }
 });
 
