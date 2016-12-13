@@ -6,7 +6,11 @@ var PaisSchema = new mongoose.Schema({
   populacao: String,
   anoIndependencia: String,
   presidente: String,
-  regimePolitico: String
+  regimePolitico: String,
+  curso: {
+        codigo: String,
+        nome: String,
+    }
 });
 
 module.exports = mongoose.model('Pais', PaisSchema);
