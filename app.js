@@ -9,6 +9,9 @@ var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
 var tecnologia = require('./routes/tecnologia');
 
+var jogador = require('./routes/jogador');
+var time = require('./routes/time');
+
 var mongoose = require('mongoose');
 
 //Connexão com o banco de dados MongoDB
@@ -57,6 +60,8 @@ app.use('/usuario', usuario);
 app.use('/perfil', perfil);
 app.use('/tecnologia', tecnologia);
 
+app.use('/jogador', jogador);
+app.use('/time', time);
 
 
 //Configuração de páginas não encontradas
